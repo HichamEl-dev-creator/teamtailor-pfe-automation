@@ -1,0 +1,22 @@
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Informations personnelles
+CV_Hicham.pdf
+*.mp4
+*.mov
+*.webm
+
+# Résultats des candidatures
+candidatures.csv
+offres.json
+captures/
+screenshots/
+*.log
+
+# Secrets
+.env
+.env.*
