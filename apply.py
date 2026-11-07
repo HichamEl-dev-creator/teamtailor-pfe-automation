@@ -308,19 +308,12 @@ def do_form(page, profile):
     radio(page, r'recherche d.un stage de PFE', 'Oui')
     school(page, profile['ecole'])
     fill_required(page, [r'intitulé de ta formation', r'intitulé de.*formation'], profile['formation'])
-    fill_required(page, [r'Quelles langues parles-tu', r'langues'], profile['langues'], mandatory=False)
-    radio(page, r'Tu es\s*\?', profile['Genre'], mandatory=False)
     fill_required(page, [r'^Prénom'], profile['prenom'], css='input[autocomplete="given-name"]')
     fill_required(page, [r'^Nom\s*\*?$', r'^Nom$'], profile['nom'], css='input[autocomplete="family-name"]')
     fill_required(page, [r'E-?mail', r'Adresse e-?mail'], profile['email'], css='input[type="email"]')
     fill_required(page, [r'Téléphone', r'phone'], profile['telephone'], css='input[type="tel"]')
     upload(page, profile['cv'], 'cv')
     upload(page, profile['video'], 'video')
-    if profile.get('motivation'):
-        fill_required(page, [r'Lettre de motivation'], profile['motivation'],
-                      css='textarea[name*="cover_letter"]', mandatory=False)
-    # Observe any other questions with required indicators before submitting.
-
 
 def submission_button(page):
     for ctx in contexts(page):
@@ -351,7 +344,8 @@ def main():
         if not args.all_offers:
             terms = ['informatique', 'logiciel', 'développ', 'data', 'donnée', 'intelligence artificielle',
                      ' ia ', 'digital', 'vidéo intelligente', 'cybersécurité', 'cloud', 'réseau', 'système d’information',
-                     'bim', 'application', 'tracking']
+                     'bim', 'application', 'tracking', 'software', 'web', 'mobile', 'robotique', 'automatisation', 
+                     'programmation', 'algorithmique', 'DevOps', 'machine learning', 'deep learning', 'IA', 'data science', 'analyse de données']
             offers = [(u, t) for u, t in offers if any(k in (' ' + t.casefold() + ' ') for k in terms)]
             print(f'{len(offers)} offres retenues après filtrage par titre')
         already = previously_sent()

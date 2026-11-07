@@ -10,11 +10,11 @@ Dans le dossier du projet :
 
 - `apply.py` : script principal
 - `profil.json` : prénom, nom, école (`FST`), formation, coordonnées et motivation
-- `Votre CV.pdf` : CV fourni (Ajouter votre propre CV)
+- `CV_Hicham.pdf` : CV fourni (Ajouter votre propre CV)
 - `presentation_pfe.mp4` : **à ajouter soi-même**, présentation vidéo obligatoire
 - `requirements.txt` : bibliothèques Python
 
-Ajouter vos propres informations dans le fichier `profil.json`.
+Le chemin de la vidéo dans `profil.json` doit correspondre au fichier.
 
 ## 2. Ubuntu / Linux (terminal Bash)
 
@@ -24,7 +24,7 @@ Dans le terminal, placez-vous dans le dossier du projet :
 cd ~/Documents/Projet_Teamtailor_PFE_Final
 ```
 
-Installez le support des environnements virtuels :
+Si nécessaire, installez le support des environnements virtuels :
 
 ```bash
 sudo apt update
@@ -94,7 +94,6 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 
 Pour quitter l'environnement : `deactivate`.
 
-
 ## 4. Tester sans soumettre (Windows et Linux)
 
 Après avoir activé `.venv` et ajouté `presentation_pfe.mp4` :
@@ -139,11 +138,3 @@ python apply.py --submit --all-offers
 ```
 
 Le script mémorise les candidatures `soumis` dans `candidatures.csv`. Ne supprimez pas ce journal avant d'avoir vérifié les candidatures enregistrées. Le nombre d'offres est découvert automatiquement et peut différer de 81.
-
-## 7. CAPTCHA, erreurs et limites
-
-- Un CAPTCHA doit être résolu **manuellement** ; aucun contournement n'est implémenté.
-- Des pauses entre les offres évitent une surcharge du portail, mais ne garantissent pas l'absence de limitation.
-- Le script enregistre les erreurs par offre et s'arrête si une soumission a un statut incertain, afin de limiter les doublons.
-- Certaines offres peuvent demander des champs supplémentaires non couverts par le script ; vérifier visuellement et respecter les règles du portail.
-- Il n'est pas garanti que tous les champs ou uploads soient reconnus sans ajustement sur le formulaire réel.

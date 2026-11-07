@@ -1,13 +1,10 @@
 {
-  "prenom": "",
-  "nom": "",
-  "Genre": "",
-  "email": "",
-  "telephone": "",
+  "prenom": "Hicham",
+  "nom": "El Hachami",
+  "email": "hicham.elhachami.engineer@gmail.com",
+  "telephone": "+212 649-392339",
   "ecole": "FST",
   "formation": "Cycle d’Ingénieur en Génie Logiciel et Intelligence Artificielle",
-  "langues": "",
-  "cv": "",
-  "video": "presentation_pfe.mp4",
-  "motivation": ""
+  "cv": "CV_Hicham.pdf",
+  "video": "presentation_pfe.mp4"
 }
